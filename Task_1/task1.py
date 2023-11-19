@@ -1,4 +1,3 @@
-import sys
 c = int(input("1.Add task\n2.View Tasks\n3.Delete Tasks\n4.Exit\n"))
 
 
