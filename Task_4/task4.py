@@ -1,20 +1,25 @@
 import random
 import time
-
-print("Rock-Paper-Scissors")
+from simple_colors import *
+title = ["Rock", "Paper", "Scissors"]
+print(cyan('Rock-Paper-Scissors', 'bold'))
 user = input("Enter your choice: ")
-rps = ["Rock", "Paper", "Scissors"]
+rps = ["Paper", "Rock", "Scissors"]
+if user not in rps:
+    print("Invalid Choice !")
+    user = input("Enter your choice: ")
 comp = random.choice(rps)
 
-# Display countdown
-for i in rps:
-    print("\r" + i, end="")
-    time.sleep(1)
-print("\r ")
+for i in title:
 
-# Display computer's choice
-print("My choice :", comp)
-if i[0]>comp[0] and comp is not "Rock":
-    print("You won !")
+    print(magenta("\r" + i, "bold"), end=" ")
+    time.sleep(0.75)
+print(magenta("\rGo !", "bold"))
+
+print("Computer's choice :", yellow(comp, "bold"))
+if user[0] < comp[0] and comp == "Scissors":
+    print(green("You won !", "bold"))
+elif user[0] == comp[0]:
+    print(blue("Draw", "bold"))
 else:
-    print("I won !")
+    print(red("Computer won !", "bold"))
