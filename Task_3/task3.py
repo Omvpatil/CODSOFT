@@ -3,9 +3,9 @@ import random
 Capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 Small = "abcdefghijklmnopqrstuvwxyz"
 Special = "~`@!#$%^&*()_+{}:;/?"
-num = "1234567890"
+Num = "1234567890"
 password = ""
-char = [Capital, Special, Small, num]
+char = [Capital, Special, Small, Num]
 length = int(input("Enter length of password :"))
 for i in range(length):
     for j in random.choices(char,):
