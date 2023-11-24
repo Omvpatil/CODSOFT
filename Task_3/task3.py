@@ -19,5 +19,5 @@ choice = input("[Y]es/[N]o :")
 if choice == "y" "Y":
     choice = input(simple_colors.green("By which name ?\n"))
     f = open("password.txt", "a")
-    f.write(choice + "-->" + password)
+    f.write(choice + "-->" + password + "\n")
     f.close()
