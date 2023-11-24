@@ -1,8 +1,8 @@
 import random
 import time
-from simple_colors import *
+import simple_colors
 title = ["Rock", "Paper", "Scissors"]
-print(cyan('Rock-Paper-Scissors', 'bold'))
+print(simple_colors.cyan('Rock-Paper-Scissors', 'bold'))
 user = input("Enter your choice: ")
 rps = ["Paper", "Rock", "Scissors"]
 if user not in rps:
@@ -12,14 +12,14 @@ comp = random.choice(rps)
 
 for i in title:
 
-    print(magenta("\r" + i, "bold"), end=" ")
+    print(simple_colors.magenta("\r" + i, "bold"), end=" ")
     time.sleep(0.75)
-print(magenta("\rGo !", "bold"))
+print(simple_colors.magenta("\rGo !", "bold"))
 
-print("Computer's choice :", yellow(comp, "bold"))
+print("Computer's choice :", simple_colors.yellow(comp, "bold"))
 if user[0] < comp[0] and comp == "Scissors":
-    print(green("You won !", "bold"))
+    print(simple_colors.green("You won !", "bold"))
 elif user[0] == comp[0]:
-    print(blue("Draw", "bold"))
+    print(simple_colors.blue("Draw", "bold"))
 else:
-    print(red("Computer won !", "bold"))
+    print(simple_colors.red("Computer won !", "bold"))
