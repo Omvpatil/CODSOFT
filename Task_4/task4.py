@@ -9,8 +9,7 @@ rps = ["Paper", "Rock", "Scissors"]
 if user not in rps:
     print("Invalid Choice !")
     user = input("Enter your choice: ")
-# comp = random.choice(rps)
-comp = "Scissors"
+comp = random.choice(rps)
 for i in title:
     print(simple_colors.magenta("\r" + i, "bold"), end=" ")
     time.sleep(0.75)
